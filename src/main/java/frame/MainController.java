@@ -37,12 +37,7 @@ public class MainController {
         if(list == null){
             list = FXCollections.observableArrayList();
             listview.setItems(list);
-            listview.setCellFactory(lv -> new ListCell<Task>(){
-                @Override
-                protected void updateItem(Task task, boolean empty) {
-                    super.updateItem(task, empty);
-                }
-            });
+
         }
         list.add(new Task("title", "content"));
     }
